@@ -1,0 +1,99 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background-color: #f2f2f2;
+	font-family: sans-serif;
+}
+.cabeceraPrincipal, .sliderPrincipal, main, .contenedor1{
+	width: 90%;
+	margin: 0 auto;
+}
+.menuTop{
+	background-color: #FDF300;
+	padding: 5px 10px;
+}
+.menuTop a{
+	text-decoration: none;
+	color: #000;
+	padding: 5px 10px;
+}
+.cabeceraPrincipal{
+	background: #fff;
+}
+.cabeceraPrincipal img{
+	padding: 0 10px;
+}
+.menuPrincipal{
+	background-color: #FCC27E;
+	text-align: center;
+	padding: 10px 10px;
+}
+.menuPrincipal a{
+	text-decoration: none;
+	color: #3A3A3A;
+	text-transform: uppercase;
+	padding: 10px 10px;
+	font-weight: 700;
+}
+.menuPrincipal a:hover{
+	background-color: #EDD502;
+	color: #000;
+}
+.sliderPrincipal img{
+	width: 100%;
+}
+main{
+	background-color: #fff;
+}
+main h2{
+	color: #DB6900;
+	text-align: center;
+	font-size: 30px;
+	padding: 30px 0;
+}
+.menuDia, .areaChef{
+	width: 100%;
+	text-align: center;
+}
+.menu{
+	width: 30%;
+	background: #EDEDED;
+	border: 1px solid #BBB6B6;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+
+	display: inline-block;
+	margin: 20px 15px;
+}
+.menu img{
+	width: 100%;
+}
+.menu h3{
+	color: #DB6900;
+	text-transform: uppercase;
+	padding: 15px 0;
+}
+.menu p{
+	color: #494848;
+	padding: 10px 0;
+}
+.chef{
+	width: 47%;
+	background-color: red;
+	display: inline-block;
+	height: 300px;
+	margin-bottom: 10px;
+}
+.footerPrincipal{
+	width: 100%;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+}
+
+.footerPrincipal h6{
+	padding: 20px 0;
+	font-size: 11px;
+}

@@ -4,40 +4,62 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Mi primer ejemplo de PHP</title>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 <body>
-	<header>
-		<h1>Mi primera app en php</h1>
+	<div class="contenedor1">	
+		<nav class="menuTop">
+			<a href="">099999544</a>
+			<a href="">info@gmail.com</a>
+		</nav>
+	</div>
+	<header class="cabeceraPrincipal">
+		<img src="images/logoapp.png" alt="logo-Restaurante" title="Logo Restaurante">
 	</header>
-<nav>
-	<a href="index.php">Inicio</a>
-	<a href="acercade.html">Acerca de</a>
-	<a href="validar.php">Validad edad</a>
-	<a href="contactos.php">Contactos</a>
-</nav>
-<?php 
-//Declaracion de variables
-#una nueva forma de comentar la linea de código
-$var1=23;
-$var2=3;
-$edad=35;
-$res=$var1+$var2;
-//echo "El resultado es: ".$res;
-/*
-if ($edad>=18) {
-	echo "Ud es mayor de edad ".$edad;
-}else{
-	echo "Ud es menor de edad ".$edad;	
-}*/
-
-for ($i=0; $i < 12; $i++) { 
-	$res=5*$i;
-	echo "5 * ".$i."=".$res."<br>";
-}
-$var3=2;
-$var4="10";
-$result=$var3*$var4;
-echo $result;
-?>
+	<div class="contenedor1">
+		<nav class="menuPrincipal">
+			<a href="index.php">Inicio</a>
+			<a href="internas/menu.php">Menu</a>
+			<a href="internas/usuarios.php">Usuarios</a>
+			<a href="internas/validar.php">Validad edad</a>
+			<a href="internas/contactos.php">Contactos</a>
+			<a href="internas/login.php">Login</a>
+		</nav>
+	</div>
+	<section class="sliderPrincipal">
+		<img src="images/slider1.jpg">
+	</section>
+	<main>
+		<h2>Menu del día</h2>
+		<section class="menuDia">
+			<article class="menu">
+				<img src="images/menu1.jpg">
+				<h3>Lasaña de mariscos</h3>
+				<p>Informacion del menu del dia que contiene mariscos y una procion de arroz</p>
+			</article>
+			<article class="menu">
+				<img src="images/menu2.jpg">
+				<h3>Lasaña de mariscos</h3>
+				<p>Informacion del menu del dia que contiene mariscos y una procion de arroz</p>
+			</article>
+			<article class="menu">
+				<img src="images/menu3.jpg">
+				<h3>Lasaña de mariscos</h3>
+				<p>Informacion del menu del dia que contiene mariscos y una procion de arroz</p>
+			</article>
+		</section>
+		<h2>Nuestros chefs</h2>
+		<section class="areaChef">
+			<article class="chef">
+				nombre chef
+			</article>
+			<article class="chef">
+				nombre chef
+			</article>
+		</div>
+	</main>
+	<footer class="footerPrincipal">
+		<h6>Derechos Reservados UTPL 2022</h6>
+	</footer>
 </body>
 </html>
