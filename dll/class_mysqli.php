@@ -74,20 +74,30 @@ class clase_mysqli{
 		}
 		echo "</table>";
 	}
-	function verconsultareporte(){
-		echo "<table class='tablecud'>";
+	function verconsultacrud(){
+		$listaRol[1]="Administrador";
+		$listaRol[2]="Comensal";
+		
+		echo "<table class='tablecud' border=1>";
 		echo "<tr>";
 		for ($i=0; $i < $this->numcampos() ; $i++) { 
 			//echo "<td>".$this->nombrecampo($i)."</td>";
 			echo  "<td>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</td>";
 		}
+		echo  "<td>Actualizar</td>";
+		echo  "<td>Borrar</td>";
 		echo "</tr>";
 		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
 			echo "<tr>";
 			for ($i=0; $i < $this->numcampos(); $i++) { 
-				echo "<td>".utf8_decode($row[$i])."</td>";
-				//echo "<td>".$row[$i]."</td>";
+				if ($i==5) {
+					echo "<td>".$listaRol[$row[$i]]."</td>";
+				}else{
+					echo "<td>".$row[$i]."</td>";
+				}
 			}
+				echo  "<td><a href='actualizarUsuario.php?idUser=$row[0]'>Actualizar</a></td>";
+				echo  "<td><a href='borrarUsuario.php?idUser=$row[0]'>Borrar</a></td>";
 			echo "</tr>";
 		}
 		echo "</table>";
@@ -156,6 +166,8 @@ class clase_mysqli{
 		echo "</table>";
 	}
 	function verconsulta_crud(){
+		$listaRol[1]="Administrador";
+		$listaRol[2]="Comensal";
 		echo "<table id='example' class='table table-bordered  display nowrap tablecud'  width='99%'>";
 		echo " <thead><tr>";
 		for ($i=0; $i < $this->numcampos() ; $i++) { 
@@ -169,7 +181,11 @@ class clase_mysqli{
 		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
 			echo "<tr>";
 			for ($i=0; $i < $this->numcampos(); $i++) { 
-				echo "<td>".$row[$i]."</td>";
+				if ($i==5) {
+					echo "<td>".$listaRol[$row[$i]]."</td>";
+				}else{
+					echo "<td>".$row[$i]."</td>";
+				}
 			}
 			echo "<td><a href='actualizar.php?id=$row[0]'><i class='fas fa-edit'></i></a></td>";
 			echo "<td><a href='borrar.php?idr=$row[0]'><i class='fas fa-trash-alt'></i></a></td>";

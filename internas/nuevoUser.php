@@ -29,17 +29,19 @@
 
 	<main>
 		<h2>Usuarios del restaurante</h2>
-		<h3><a href="nuevoUser.php">Nuevo Usuario</a></h3>
-		<?php
-			include ('../dll/config.php');
-			include ('../dll/class_mysqli.php');
-
-			$conexion= new clase_mysqli();
-			$conexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
-			$resutConsulta=$conexion->consulta("select* from usuarios ");
-			$conexion->verconsultacrud();
-			
-		?>
+		<h3>Nuevo Usuario</h3>
+		<form method="post" action="guardarUsuario.php">
+			<input type="text" name="nombres" placeholder="Ingrese sus nombres"><br>
+			<input type="text" name="apellidos" placeholder="Ingrese sus apellidos"><br>
+			<input type="email" name="correo" placeholder="Ingrese el correo"><br>
+			<input type="number" name="cedula" placeholder="Ingrese su cedula"><br>
+			<select name="rol">
+				<option value="">Seleccione el rol</option>
+				<option value="1">Administrador</option>
+				<option value="2">Comensal</option>
+			</select><br>
+			<input type="submit" name="" value="Guardar">
+		</form>
 		
 	</main>
 	<footer class="footerPrincipal">
